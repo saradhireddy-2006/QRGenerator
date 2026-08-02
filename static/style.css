@@ -94,17 +94,44 @@ img{
     background:#1e7e34;
 }
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-form{
-flex-direction:column;
-}
+    body{
+        padding:20px;
+    }
 
-input,button{
-width:100%;
-}
+    .container{
+        width:95%;
+        max-width:400px;
+        padding:30px 20px;
+    }
 
-img{
-width:200px;
-}
+    h1{
+        font-size:28px;
+        margin-bottom:20px;
+    }
+
+    form{
+        flex-direction:column;
+    }
+
+    input,
+    button{
+        width:100%;
+        font-size:18px;
+        padding:16px;
+    }
+
+    img{
+        width:280px;
+        max-width:100%;
+        margin-top:20px;
+    }
+
+    .download-btn{
+        width:100%;
+        display:block;
+        padding:15px;
+        font-size:18px;
+    }
 }
