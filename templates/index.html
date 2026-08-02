@@ -1,0 +1,29 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>QR Code Generator</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+    <div class="container">
+    <h1>QR Code Generator</h1>
+
+    <form method="POST">
+        <input type="text" name="text" placeholder="Enter text..." value="{{ text if text else '' }}">
+    <button type="submit"> Generate QR </button>
+    </form>
+
+    {% if qr_image %}
+    <img src="{{ url_for('static', filename=qr_image) }}">
+    <br>
+    <a href="{{ url_for('static', filename=qr_image) }}"
+    download
+    class="download-btn">
+    ⬇️ Download QR
+    </a>
+    {% endif %}
+    </div>
+
+    </body>
+    </html>
